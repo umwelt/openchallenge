@@ -1,0 +1,42 @@
+{
+  "code": 200,
+  "status": "OK",
+  "copyright": "2023 Marvel",
+  "attributionText": "Data provided by Marvel. © 2023 Marvel",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2023 Marvel</a>",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 2,
+    "count": 2,
+    "results": [
+      {
+        "id": 1,
+        "name": "Character 1",
+        "description": "Sample character 1",
+        "modified": "2023-01-01T00:00:00.000Z",
+        "resourceURI": "https://example.com/1",
+        "urls": [],
+        "thumbnail": null,
+        "comics": null,
+        "stories": null,
+        "events": null,
+        "series": null
+      },
+      {
+        "id": 2,
+        "name": "Character 2",
+        "description": "Sample character 2",
+        "modified": "2023-01-01T00:00:00.000Z",
+        "resourceURI": "https://example.com/2",
+        "urls": [],
+        "thumbnail": null,
+        "comics": null,
+        "stories": null,
+        "events": null,
+        "series": null
+      }
+    ]
+  },
+  "etag": "12345"
+}
