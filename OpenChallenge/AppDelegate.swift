@@ -13,7 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Load keys from JSON file
+        if let path = Bundle.main.path(forResource: "secrets", ofType: "json") {
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let keys = try JSONDecoder().decode(Keys.self, from: jsonData)
+
+                // Store keys in Keychain
+                APISecret.storeAPIKey(keys.publicKey)
+                APISecret.storePrivateKey(keys.privateKey)
+            } catch {
+                fatalError("Error loading keys: \(error.localizedDescription)")
+            }
+        } else {
+            fatalError("Keys file not found")
+        }
+
+        // Continue with app launch
         return true
     }
 
