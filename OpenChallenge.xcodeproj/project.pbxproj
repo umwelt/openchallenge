@@ -42,7 +42,7 @@
 		30018DF329F73F5500B0C05D /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DF229F73F5500B0C05D /* CharacterTableViewCell.swift */; };
 		30018DF529F7409300B0C05D /* ImageFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DF429F7409300B0C05D /* ImageFromURL.swift */; };
 		30018DF729F743A300B0C05D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DF629F743A300B0C05D /* Keys.swift */; };
-		30018DF929F7448400B0C05D /* keys.json in Resources */ = {isa = PBXBuildFile; fileRef = 30018DF829F743C100B0C05D /* keys.json */; };
+		30018DF929F7448400B0C05D /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 30018DF829F743C100B0C05D /* secrets.json */; };
 		30018DFB29F750F000B0C05D /* ErrorMockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DFA29F750F000B0C05D /* ErrorMockAPIManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +103,7 @@
 		30018DF229F73F5500B0C05D /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		30018DF429F7409300B0C05D /* ImageFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFromURL.swift; sourceTree = "<group>"; };
 		30018DF629F743A300B0C05D /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		30018DF829F743C100B0C05D /* keys.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = keys.json; sourceTree = "<group>"; };
+		30018DF829F743C100B0C05D /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		30018DFA29F750F000B0C05D /* ErrorMockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMockAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				30018D8A29F72F2F00B0C05D /* AppDelegate.swift */,
-				30018DF829F743C100B0C05D /* keys.json */,
+				30018DF829F743C100B0C05D /* secrets.json */,
 				30018D9329F72F3000B0C05D /* Assets.xcassets */,
 				30018DBF29F7304300B0C05D /* Extensions */,
 				30018DBE29F7303C00B0C05D /* Helpers */,
@@ -396,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30018D9729F72F3000B0C05D /* LaunchScreen.storyboard in Resources */,
-				30018DF929F7448400B0C05D /* keys.json in Resources */,
+				30018DF929F7448400B0C05D /* secrets.json in Resources */,
 				30018D9429F72F3000B0C05D /* Assets.xcassets in Resources */,
 				30018D9229F72F2F00B0C05D /* Main.storyboard in Resources */,
 			);
