@@ -8,7 +8,7 @@
 import UIKit
 
 class CharacterListViewController: UIViewController {
-    private let viewModel: CharacterListViewModel
+    var viewModel: CharacterListViewModel = CharacterListViewModel()
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -25,12 +25,24 @@ class CharacterListViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+    private func setKeys() {
+        guard let publicKey = APISecret.retrieveAPIKey(),
+              let privateKey = APISecret.retrievePrivateKey() else {
+            fatalError("API keys not found")
+        }
+
+        let apiManager = APIManager(publicKey: publicKey, privateKey: privateKey)
+        viewModel.setApiManager(apiManager: apiManager)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        setKeys()
         setupNavigationBar()
         setupTableView()
 
@@ -77,7 +89,13 @@ extension CharacterListViewController: UITableViewDataSource {
 extension CharacterListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let character = viewModel.characters[indexPath.row]
-        // Navigate to the character detail view controller
+        guard let characterId = character.id else { return }
+        
+        let characterDetailViewModel = CharacterDetailViewModel(apiManager: viewModel.apiManager, characterId: characterId)
+        let detailViewController = CharacterDetailViewController(viewModel: characterDetailViewModel)
+        
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

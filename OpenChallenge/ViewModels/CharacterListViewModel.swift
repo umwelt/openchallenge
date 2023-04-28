@@ -8,11 +8,14 @@
 import Foundation
 
 class CharacterListViewModel {
-    private let apiManager: APIManagerProtocol
+    var apiManager: APIManagerProtocol!
 
     var characters: [Character] = []
 
-    init(apiManager: APIManagerProtocol) {
+    init() {
+    }
+
+    func setApiManager(apiManager: APIManagerProtocol) {
         self.apiManager = apiManager
     }
 

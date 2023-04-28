@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
@@ -23,14 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Store keys in Keychain
                 APISecret.storeAPIKey(keys.publicKey)
                 APISecret.storePrivateKey(keys.privateKey)
+
+                // Instantiate the storyboard
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                // Instantiate the initial UINavigationController
+                let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
+
+                window = UIWindow(frame: UIScreen.main.bounds)
+                window?.rootViewController = navigationController
+                window?.makeKeyAndVisible()
+
             } catch {
                 fatalError("Error loading keys: \(error.localizedDescription)")
             }
         } else {
             fatalError("Keys file not found")
         }
-
-        // Continue with app launch
         return true
     }
 
