@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		30018D8B29F72F2F00B0C05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018D8A29F72F2F00B0C05D /* AppDelegate.swift */; };
 		30018D8D29F72F2F00B0C05D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018D8C29F72F2F00B0C05D /* SceneDelegate.swift */; };
-		30018D8F29F72F2F00B0C05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018D8E29F72F2F00B0C05D /* ViewController.swift */; };
 		30018D9229F72F2F00B0C05D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30018D9029F72F2F00B0C05D /* Main.storyboard */; };
 		30018D9429F72F3000B0C05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30018D9329F72F3000B0C05D /* Assets.xcassets */; };
 		30018D9729F72F3000B0C05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30018D9529F72F3000B0C05D /* LaunchScreen.storyboard */; };
@@ -44,6 +43,8 @@
 		30018DF729F743A300B0C05D /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DF629F743A300B0C05D /* Keys.swift */; };
 		30018DF929F7448400B0C05D /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = 30018DF829F743C100B0C05D /* secrets.json */; };
 		30018DFB29F750F000B0C05D /* ErrorMockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30018DFA29F750F000B0C05D /* ErrorMockAPIManager.swift */; };
+		30A656EA29FC1468007590AB /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A656E929FC1468007590AB /* CharacterDetailViewModel.swift */; };
+		30A656EC29FC1498007590AB /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A656EB29FC1498007590AB /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +68,6 @@
 		30018D8729F72F2F00B0C05D /* OpenChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30018D8A29F72F2F00B0C05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30018D8C29F72F2F00B0C05D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30018D8E29F72F2F00B0C05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30018D9129F72F2F00B0C05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30018D9329F72F3000B0C05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30018D9629F72F3000B0C05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		30018DF629F743A300B0C05D /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		30018DF829F743C100B0C05D /* secrets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = secrets.json; sourceTree = "<group>"; };
 		30018DFA29F750F000B0C05D /* ErrorMockAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMockAPIManager.swift; sourceTree = "<group>"; };
+		30A656E929FC1468007590AB /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		30A656EB29FC1498007590AB /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +170,6 @@
 				30018D8C29F72F2F00B0C05D /* SceneDelegate.swift */,
 				30018DDE29F7327300B0C05D /* Secrets */,
 				30018DE529F7389800B0C05D /* Utilities */,
-				30018D8E29F72F2F00B0C05D /* ViewController.swift */,
 				30018DBC29F7302A00B0C05D /* ViewControllers */,
 				30018DED29F73D3700B0C05D /* ViewModels */,
 				30018DBB29F7302200B0C05D /* Views */,
@@ -221,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				30018DF229F73F5500B0C05D /* CharacterTableViewCell.swift */,
+				30A656EB29FC1498007590AB /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				30018DEE29F73D4900B0C05D /* CharacterListViewModel.swift */,
+				30A656E929FC1468007590AB /* CharacterDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -429,18 +432,19 @@
 				30018DC129F7309500B0C05D /* CharacterListViewController.swift in Sources */,
 				30018DD729F731DE00B0C05D /* EventList.swift in Sources */,
 				30018DF329F73F5500B0C05D /* CharacterTableViewCell.swift in Sources */,
-				30018D8F29F72F2F00B0C05D /* ViewController.swift in Sources */,
 				30018DD529F731D500B0C05D /* StorySummary.swift in Sources */,
 				30018DF529F7409300B0C05D /* ImageFromURL.swift in Sources */,
 				30018DC529F7318C00B0C05D /* CharacterDataWrapper.swift in Sources */,
 				30018DDD29F731FA00B0C05D /* SeriesSummary.swift in Sources */,
 				30018DCB29F731A700B0C05D /* Url.swift in Sources */,
+				30A656EA29FC1468007590AB /* CharacterDetailViewModel.swift in Sources */,
 				30018DCF29F731B600B0C05D /* ComicList.swift in Sources */,
 				30018DC729F7319500B0C05D /* CharacterDataContainer.swift in Sources */,
 				30018D8B29F72F2F00B0C05D /* AppDelegate.swift in Sources */,
 				30018DEF29F73D4900B0C05D /* CharacterListViewModel.swift in Sources */,
 				30018DE729F738A500B0C05D /* Crypto.swift in Sources */,
 				30018DE429F7354D00B0C05D /* APIManager.swift in Sources */,
+				30A656EC29FC1498007590AB /* CharacterDetailView.swift in Sources */,
 				30018DDB29F731F000B0C05D /* SeriesList.swift in Sources */,
 				30018D8D29F72F2F00B0C05D /* SceneDelegate.swift in Sources */,
 				30018DC929F7319C00B0C05D /* Character.swift in Sources */,

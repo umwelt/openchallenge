@@ -10,15 +10,17 @@ import Security
 
 class APISecret {
     private static let keychainService = "com.open.zone.publicKey"
-    private static let apiKeyAccount = ""
+    private static let apiKeyAccount = "openChallenge"
 
-    private static let privateKeyAccount = ""
+    private static let privateKeyAccount = "openChallenge"
     private static let privateKeyService = "com.open.zone.privateKey"
 
 }
 
 // MARK: - Public Keys
 extension APISecret {
+    
+
     static func storeAPIKey(_ key: String) {
         if let data = key.data(using: .utf8) {
             let query: [NSString: Any] = [
@@ -30,6 +32,7 @@ extension APISecret {
             SecItemAdd(query as CFDictionary, nil)
         }
     }
+    
 
     static func retrieveAPIKey() -> String? {
         let query: [NSString: Any] = [
